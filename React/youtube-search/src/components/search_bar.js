@@ -5,14 +5,15 @@ class SearchBar extends React.Component {
 	constructor(props) {
 		super(props);
 
+		/*Estado. Es un valor que se puede modificar, aqui en el constructor lo inicializamos a vacio 
+		para posteriormente utilizarlo*/
 		this.state = { term: ''  };
 
 	}
 	render(){
 		return (
 		<div>
-			<input onChange={event => this.setState({term: event.target.value})} />
-			<p>valor del input {this.state.term}</p>
+			<input onChange={event => this.setState({term: event.target.value})} />			
 		</div>
 		);
 	}
