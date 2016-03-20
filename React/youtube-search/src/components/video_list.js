@@ -6,7 +6,11 @@ const VideoList = (props) => {
 		/*key=video.etag lo utilizamos para crear un id unico y lo cogemos del id del video.
 		Eso lo miramos en la consola, pestaña network, archivo search?part...
 		*/
-		return <VideoListItem key={video.etag} video={video} />
+		return (
+			<VideoListItem 
+			onVideoSelect = {props.onVideoSelect}
+			key={video.etag} video={video} />
+		);
 	});
 
 	return (
